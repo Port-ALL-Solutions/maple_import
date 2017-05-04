@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="import_acer_form_view">
+            <field name="name">Import Acer CSV Report</field>
+            <field name="model">import.acer</field>
+                <field name="arch" type="xml">
+                    <form string="Import Acer Report Using CSV">
+                        <group>
+                            <field name="import_file" class="oe_inline" filename="datas_fname" required="True"/>
+                            <field name="datas_fname" class="oe_inline" invisible="0" readonly="0"/>
+                            <field name="acer_location_id" class="oe_inline"/>
+                        </group>
+                        <footer>
+                            <button string="Import" name="action_acer_import_file" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </footer>
+                    </form>
+                </field>
+        </record>
+
+        <record id="action_import_acer" model="ir.actions.act_window">
+            <field name="name">Import Acer CSV Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">import.acer</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="import_acer_form_view"/>
+            <field name="target">new</field>
+        </record>
+
+   </data>
+</openerp>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  	<data>
+      
+		<menuitem id="maple_menu_import_maple" 
+			name="Import Maple Classification Report" 
+			parent="maple.maple_classif_menu"
+			sequence="64"
+            action="action_import_maple"/>
+            
+  	</data>
+</openerp>
